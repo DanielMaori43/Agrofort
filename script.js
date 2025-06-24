@@ -113,8 +113,8 @@ function atualizarRelatorio() {
   const totalGeral = totalPesticidas + totalFerramentas;
 
   container.innerHTML = `
-    <p>🧪 Custo com Pesticidas: <strong>R$ ${totalPesticidas.toFixed(2)}</strong></p>
-    <p>🔧 Custo com Ferramentas/Máquinas: <strong>R$ ${totalFerramentas.toFixed(2)}</strong></p>
+    <p>🧪 Custo c/ Pesticidas: <strong>R$ ${totalPesticidas.toFixed(2)}</strong></p>
+    <p>🔧 Custo c/ Ferramentas/Máquinas: <strong>R$ ${totalFerramentas.toFixed(2)}</strong></p>
     <p>💰 <strong>Total Geral:</strong> <strong>R$ ${totalGeral.toFixed(2)}</strong></p>
   `;
 }
