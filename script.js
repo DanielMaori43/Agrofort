@@ -114,7 +114,7 @@ function atualizarRelatorio() {
 
   container.innerHTML = `
     <p>🧪  Pesticidas: <strong>R$ ${totalPesticidas.toFixed(2)}</strong></p>
-    <p>🔧  Ferramentas/Máquinas: <strong>R$ ${totalFerramentas.toFixed(2)}</strong></p>
+    <p>🔧  Ferramentas/Máquinas:<strong>R$ ${totalFerramentas.toFixed(2)}</strong></p>
     <p>💰 <strong>Total Geral:</strong> <strong>R$ ${totalGeral.toFixed(2)}</strong></p>
   `;
 }
