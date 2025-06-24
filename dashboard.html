@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroFort</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="sidebar">
+      <div class="menu-button" id="menu-toggle">&#9776;</div>
+      <ul id="menu">
+          <li><a href="#" onclick="showSection('dashboard')"><strong>Controle Agrícola</strong></a></li>
+          <li><a href="#" onclick="showSection('pesticidas')">Gestão de Pesticidas</a></li>
+          <li><a href="#" onclick="showSection('ferramentas')">Gestão de Ferramentas/Maquinários</a></li>
+          <li><a href="#" onclick="showSection('safra')">Relatório de Safra</a></li>
+        </ul>
+    </nav>
+    
+    <div class="main">
+        <div id="dashboard" class="logo section">
+            <!-- <h1>Agro<span>Fort</span></h1> -->
+            <img src="/AgroFort.png" alt="Logo AgroFort" class="sidebar-logo">
+      <!-- <p>Um novo conceito em <strong>Tecnologia</strong></p> -->
+    </div>
+
+    <!-- Gestão de Pesticidas -->
+    <section id="pesticidas" class="card section hidden">
+      <h2>Gestão de Pesticidas</h2>
+      <form onsubmit="addPesticida(event)">
+        <input type="text" id="nomePesticida" placeholder="Nome" required>
+        <input type="number" id="valorPesticida" placeholder="Valor (R$)" required>
+        <button type="submit">Adicionar ➕</button>
+      </form>
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>Valor (R$)</th><th>Ações</th></tr>
+        </thead>
+        <tbody id="pesticidasTable"></tbody>
+      </table>
+    </section>
+
+    <!-- Gestão de Ferramentas -->
+    <section id="ferramentas" class="card section hidden">
+      <h2>Gestão de Ferramentas/Maquinários</h2>
+      <form onsubmit="addFerramenta(event)">
+        <input type="text" id="nomeFerramenta" placeholder="Nome" required>
+        <input type="number" id="valorFerramenta" placeholder="Valor (R$)" required>
+        <button type="submit">Adicionar ➕</button>
+      </form>
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>Valor (R$)</th><th>Ações</th></tr>
+        </thead>
+        <tbody id="ferramentasTable"></tbody>
+      </table>
+    </section>
+
+    <!-- Relatório de Safra -->
+    <section id="safra" class="card section hidden">
+      <h2>Relatório de Safra</h2>
+      <strong>Sementes, e outros custos.</strong>
+      <div id="custosRelatorio"></div>
+    </section>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
